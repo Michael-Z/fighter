@@ -44,19 +44,19 @@
 
 -(void) StartGame:(id) sender{
 //    [self startNewGame];
-    if (spriteCountinue.visible || ischeck) {
-        return;
-    }
-    ischeck = YES;
-    NSUserDefaults * defaultsDate = [NSUserDefaults standardUserDefaults];
-    if ([defaultsDate boolForKey:@"HasSave"]) {
-        spriteCountinue.visible = YES;
-    }else
+//    if (spriteCountinue.visible || ischeck) {
+//        return;
+//    }
+//    ischeck = YES;
+//    NSUserDefaults * defaultsDate = [NSUserDefaults standardUserDefaults];
+//    if ([defaultsDate boolForKey:@"HasSave"]) {
+//        spriteCountinue.visible = YES;
+//    }else
         [self startNewGame];
 }
 
 -(void) startNewGame{
-    spriteCountinue.visible = NO;
+//    spriteCountinue.visible = NO;
     [[CCDirector sharedDirector] resume];
     CCScene * scene = [PlayerSelecScene node];//[CCBReader sceneWithNodeGraphFromFile:@"PlayerSelect.ccbi"];
     [[CCDirector sharedDirector] pushScene:scene];
